@@ -38,7 +38,8 @@ html {
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
-  top: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .slider__link {
@@ -47,4 +48,17 @@ html {
   background-color: rgb(110, 203, 234);
   border: 2px solid rgb(110, 203, 234);
   border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    border: 2px solid #fff;
+    background-color: #FFf;
+  }
+
+  &:active {
+    /* background-color: transparent; */
+    background-color: transparent;
+    border: 2px solid #fff;
+  }
 }
