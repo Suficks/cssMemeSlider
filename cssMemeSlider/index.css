@@ -1,0 +1,50 @@
+html {
+  background-color: rgb(85, 77, 77);
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+.slider__container {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+.slide {
+  position: relative;
+
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  max-width: 1440px;
+  max-height: 530px;
+}
+
+.slider__pic {
+  border-radius: 0.5rem;
+}
+
+.slider__text {
+  margin-bottom: 0;
+  color: #FFF;
+  font-size: 25px;
+}
+
+.slider__nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  top: 0;
+}
+
+.slider__link {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(110, 203, 234);
+  border: 2px solid rgb(110, 203, 234);
+  border-radius: 50%;
+}
