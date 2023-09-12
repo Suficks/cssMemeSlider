@@ -84,7 +84,10 @@ input[name="slider"] {
   display: none;
 }
 
-input[type="radio"]:checked~.slider__nav .slider__btn {
+#slide1:checked~.flex__container .slider__nav .slider__btn[for="slide1"],
+#slide2:checked~.flex__container .slider__nav .slider__btn[for="slide2"],
+#slide3:checked~.flex__container .slider__nav .slider__btn[for="slide3"],
+#slide4:checked~.flex__container .slider__nav .slider__btn[for="slide4"] {
   background-color: transparent;
 }
 
