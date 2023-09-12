@@ -73,34 +73,43 @@ input[name="slider"] {
   display: none;
 }
 
-#slide1:checked~.img__container .s1 {
-  margin-left: 0;
+input[type="radio"]:checked~.slider__nav .slider__btn {
+  background-color: transparent;
 }
 
-#slide2:checked~.img__container .s1 {
-  margin-left: -100%;
-}
-
-#slide3:checked~.img__container .s1 {
-  margin-left: -200%;
-}
-
-#slide4:checked~.img__container .s1 {
-  margin-left: -300%;
-}
-
+#slide1:checked~.img__container .s1,
 #slide1:checked~.flex__container .text__container .s2 {
   margin-left: 0;
 }
 
+#slide2:checked~.img__container .s1,
 #slide2:checked~.flex__container .text__container .s2 {
   margin-left: -100%;
 }
 
+#slide3:checked~.img__container .s1,
 #slide3:checked~.flex__container .text__container .s2 {
   margin-left: -200%;
 }
 
+#slide4:checked~.img__container .s1,
 #slide4:checked~.flex__container .text__container .s2 {
   margin-left: -300%;
+}
+
+@media screen and (max-width: 560px) {
+  .flex__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text__container {
+    align-self: flex-start;
+    width: 100%;
+    order: 2;
+  }
+
+  .slider__nav {
+    margin-top: 1.2rem;
+  }
 }
