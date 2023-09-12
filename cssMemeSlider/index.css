@@ -64,6 +64,17 @@ body {
   transition: 0.3s ease;
 }
 
+.slider__btn:last-child {
+  margin-right: 0.5rem;
+}
+
+.fake {
+  margin-left: -0.5rem;
+  width: 1.7rem;
+  height: 0.7rem;
+  cursor: pointer;
+}
+
 .slider__btn:hover {
   border: 2px solid #fff;
   background-color: #FFf;
@@ -110,6 +121,6 @@ input[type="radio"]:checked~.slider__nav .slider__btn {
   }
 
   .slider__nav {
-    margin-top: 1.2rem;
+    margin-top: 1.2em;
   }
 }
