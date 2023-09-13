@@ -1,0 +1,131 @@
+body {
+  background-color: rgb(85, 77, 77);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 1.5rem;
+}
+
+.slider__wrapper {
+  margin: auto;
+  max-width: 50rem;
+}
+
+.slider {
+  overflow-x: hidden;
+}
+
+.img__container {
+  display: flex;
+  margin-bottom: 1.2rem;
+}
+
+.slider__pic {
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: 0.7s ease;
+}
+
+.flex__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.text__container {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  overflow: hidden;
+}
+
+.slider__text {
+  flex: 1 0 100%;
+  margin: 0;
+  color: #FFF;
+  font-size: 1.5rem;
+  transition: 0.7s ease;
+}
+
+.slider__nav {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.slider__btn {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: rgb(110, 203, 234);
+  border: 0.14rem solid rgb(110, 203, 234);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.slider__btn:last-child {
+  margin: 0 0.35rem 0.4rem 0;
+}
+
+.fake {
+  margin: -0.45rem 0 0 -0.5rem;
+  width: 1.55rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.slider__btn:hover {
+  border: 0.14rem solid #fff;
+  background-color: #FFf;
+}
+
+input[name="slider"] {
+  display: none;
+}
+
+#slide1:checked~.flex__container .slider__nav .slider__btn[for="slide1"],
+#slide2:checked~.flex__container .slider__nav .slider__btn[for="slide2"],
+#slide3:checked~.flex__container .slider__nav .slider__btn[for="slide3"],
+#slide4:checked~.flex__container .slider__nav .slider__btn[for="slide4"] {
+  background-color: transparent;
+}
+
+#slide1:checked~.img__container .s1,
+#slide1:checked~.flex__container .text__container .s2 {
+  margin-left: 0;
+}
+
+#slide2:checked~.img__container .s1,
+#slide2:checked~.flex__container .text__container .s2 {
+  margin-left: -100%;
+}
+
+#slide3:checked~.img__container .s1,
+#slide3:checked~.flex__container .text__container .s2 {
+  margin-left: -200%;
+}
+
+#slide4:checked~.img__container .s1,
+#slide4:checked~.flex__container .text__container .s2 {
+  margin-left: -300%;
+}
+
+@media screen and (max-width: 560px) {
+  .flex__container {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text__container {
+    align-self: flex-start;
+    width: 100%;
+    order: 2;
+  }
+
+  .slider__nav {
+    margin-top: 0.4rem;
+  }
+}
