@@ -58,7 +58,7 @@ body {
   width: 0.6rem;
   height: 0.6rem;
   background-color: rgb(110, 203, 234);
-  border: 0.15rem solid rgb(110, 203, 234);
+  border: 0.14rem solid rgb(110, 203, 234);
   border-radius: 50%;
   cursor: pointer;
   transition: 0.3s ease;
@@ -76,7 +76,7 @@ body {
 }
 
 .slider__btn:hover {
-  border: 0.15rem solid #fff;
+  border: 0.14rem solid #fff;
   background-color: #FFf;
 }
 
